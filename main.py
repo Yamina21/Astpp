@@ -4,7 +4,7 @@ import httpx
 app = FastAPI()
 
 ASTPP_API_URL = "https://transactions.unifiedcom.cloud"
-API_AUTH_KEY = "HA39iPY7X2OFUQoQKw1MaiwZwVioQdw7"  # From astpp-config.conf
+API_AUTH_KEY = "api auth token"  # From astpp-config.conf
 
 
 
@@ -14,12 +14,12 @@ async def create_customer():
     endpoint = "/admin/customer/"
 
     headers = {
-        "x-auth-token": "HA39iPY7X2OFUQoQKw1MaiwZwVioQdw7",
+        "x-auth-token": "api auth token",
         "Content-Type": "application/json"
     }
     customer_data = {
         
-        "token": "Qiszd3AwQUN4bkVzTTZSTWpjUTBWUT09",
+        "token": "login token",
         "action": "customer_create",
         "first_name": "Alice",
         "last_name": "Smith",
@@ -60,8 +60,8 @@ async def create_customer():
 @app.post("/login")
 async def login():
     login_data = {
-        "username": "faridjema",
-        "password": "dbgbZ3X@",
+        "username": "username",
+        "password": "password",
         "device_id": "75037171-014d-4e41-aa7a-c886001146a3",
         "callkit_token": "BE6CAF775FFC2C1AAD28D9992E467156F044D68D21C59E4973C3A692DACAB03C",
         "apns_token": "63c7620a2c5ce0a1717850ecb559fb994c57bc6180f49c2e815efab09421f924",
@@ -71,7 +71,7 @@ async def login():
     endpoint = "/api/login/"
 
     headers = {
-        "x-auth-token": "HA39iPY7X2OFUQoQKw1MaiwZwVioQdw7",
+        "x-auth-token": "api auth token",
         "Content-Type": "application/json"
     }
 
